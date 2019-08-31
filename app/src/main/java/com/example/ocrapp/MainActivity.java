@@ -57,12 +57,6 @@ public class MainActivity extends AppCompatActivity {
                     REQUEST_PERMISSION);
         }
 
-        // request permission to read data (aka images) from the user's external storage of their phone
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
-                && ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
-                    REQUEST_PERMISSION);
-        }
 
         btnCamera.setOnClickListener(new View.OnClickListener() {
             @Override
